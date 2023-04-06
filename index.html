@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Registreer</h1>
+                <label>Meld je aan Anoroc Services, Wij beschermen jouw software tegen malware!</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-6">
+                      <label for="txtvoornaam">Voornaam</label>
+                    <input type="text" class="form-control" id="txtvoornaam" placeholder="Voornaam">
+                </div>
+                <div class="col-sm-6">
+                      <label for="txtachternaam">Achternaam</label>
+                    <input type="text" class="form-control" id="txtachternaam" placeholder="Achternaam">
+                  </div>
+             </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="txtgebruikersnaam ">Gebruikersnaam</label>
+                    <input type="text " class="form-control " id="txtgebruikersnaam" placeholder="divoc91">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="txtemail ">E-mailadres</label>
+                    <input type="text" class="form-control" id="txtemail" placeholder ="you@example.com">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="txtwachtwoord">Wachtwoord</label>
+                    <input type="text" class="form-control" id="txtwachtwoord" placeholder ="">
+                    <p>Je wachtwoord moet minstens 8 tekens lang zijn</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="txthhwachtwoord">Herhaal wachtwoord</label>
+                    <input type="text" class="form-control" id="txthhwachtwoord" placeholder ="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="txtadres">Adres</label>
+                    <input type="text" class="form-control" id="txtadres" placeholder ="Uw adres en huisnummer">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="land">Land</label>
+                    <select class="form-control" name="land">
+                        <option>Kies een land</option>
+                        <option>België</option>
+                        <option>Frankrijk</option>
+                        <option>Duitsland</option>
+                        <option>Nederland</option>
+                    </select>
+                </div>
+                <div class="col-sm-4">
+                    <label for="provincie">Provincie</label>
+                    <select class="form-control" name="provincie">
+                        <option>Kies een provincie</option>
+                        <option>Antwerpen</option>
+                        <option>Limburg</option>
+                    </select>
+                </div>
+                <div class="col-sm-3">
+                    <label for="postcode">Postcode</label>
+                    <select class="form-control" name="postcode">
+                        <option></option>
+                        <option>2330</option>
+                        <option>2340</option>
+                        <option>2350</option>
+                    </select>
+                </div>
+                <hr>
+                <div class="col-sm-6">
+                    <h3>Hou me op de hoogte</h3>
+                    <input type="checkbox" name="nieuwsbrief" value="nieuwsbrief">
+                      <label for="nieuwsbrief">Inschrijven voor onze nieuwsbrief</label><br>
+                      <input type="checkbox" name="voorwaarden" value="voorwaarden">
+                      <label for="voorwaarden">Ik ga akkoord met de algemene voorwaarden.</label><br>
+                </div>
+                <div class="col-sm-6">
+                    <h3>Betaling</h3>
+                    <input type="radio" id="banking" name="betaling" value="bankingapp">
+                    <label for="banking">Banking app</label><br>
+                    <input type="radio" id="overschrijving" name="betaling" value="overschrijving">
+                    <label for="overschrijving">Overschrijving</label><br>
+                    <input type="radio" id="visa" name="betaling" value="visa">
+                    <label for="visa">Visa</label><br>
+                    <input type="radio" id="paypal" name="betaling" value="paypal">
+                    <label for="paypal">Paypal</label>
+                </div>
+                <hr style="width:100%">
+                <button type="button" id="btnregistreer" class="btn btn-primary" style="width: 100%;">Wave your magic wand</button>
+                <hr style="width:100%">
+            </div>
+            
+        </div>
+        
+        <div class="col-sm-4">
+          <h3 style="visibility: hidden;">Yikes, errors..</h3>
+        </div>
+        
+    </div>
+</body>
+</html>
