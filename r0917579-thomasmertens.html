@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col">
                 <h1>Registreer</h1>
-                <label>Meld je aan Anoroc Services, Wij beschermen jouw software tegen malware!</label>
+                <label>Meld je aan bij Anoroc Services, Wij beschermen jouw software tegen malware!</label>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <label for="txtgebruikersnaam ">Gebruikersnaam</label>
-                        <input type="text " class="form-control " id="txtgebruikersnaam" placeholder="divoc91">
+                        <input type="text " class="form-control " id="txtgebruikersnaam" placeholder="u911236">
                     </div>
                 </div>
                 <div class="row">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="row alert alert-info" id="bluealertbox" style="visibility: hidden;">
                     <h4>Betalingswijze</h4>
-                    <p style="width: 100%;font-size: medium;" id="bluealert"></p>
+                    <p style="font-size: medium;" id="bluealert"></p>
                 </div>
             </div>
         </div>
@@ -197,7 +197,6 @@
                 }
             }
         }
-
         //Functie om te checken of email geldig is
         //https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript
         function validateEmail(emailadres) {
@@ -248,7 +247,7 @@
         }
         //Functie om te checken welke betalingswijze is gekozen
         function validatePayment(veld) {
-            document.getElementById('bluealert').innerHTML = veld.id
+            document.getElementById('bluealert').innerHTML = "Je betalingswijze is "+veld.id
         }
         //Functie om te checken of postcode geldig is
         function checkPC(veld){
@@ -273,7 +272,7 @@
                 document.getElementById('redalertbox').style.visibility = "hidden"
             } else {
                 let i = 0
-                let errortext
+                let errortext = ""
                 while (i < errors.length) {
                     errortext += errors[i] + "<br>"
                     i++
