@@ -16,164 +16,274 @@
             </div>
         </div>
     </div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-8">
-            <div class="row">
-                <div class="col-sm-6">
-                    <label for="txtvoornaam">Voornaam</label>
-                    <input type="text" class="form-control" id="txtvoornaam" placeholder="Voornaam">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="txtvoornaam">Voornaam</label>
+                        <input type="text" class="form-control" id="txtvoornaam" placeholder="Voornaam">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="txtachternaam">Naam</label>
+                        <input type="text" class="form-control" id="txtachternaam" placeholder="Uw naam">
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <label for="txtachternaam">Naam</label>
-                    <input type="text" class="form-control" id="txtnaam" placeholder="Uw naam">
-                  </div>
-             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label for="txtgebruikersnaam ">Gebruikersnaam</label>
-                    <input type="text " class="form-control " id="txtgebruikersnaam" placeholder="divoc91">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="txtgebruikersnaam ">Gebruikersnaam</label>
+                        <input type="text " class="form-control " id="txtgebruikersnaam" placeholder="divoc91">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="txtemail ">E-mailadres</label>
+                        <input type="text" class="form-control" id="txtemail" placeholder ="you@example.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="txtwachtwoord">Wachtwoord</label>
+                        <input type="password" class="form-control" id="txtwachtwoord" placeholder ="">
+                        <p>Je wachtwoord moet minstens 8 tekens lang zijn</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="txthhwachtwoord">Herhaal wachtwoord</label>
+                        <input type="password" class="form-control" id="txthhwachtwoord" placeholder ="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="txtadres">Adres</label>
+                        <input type="text" class="form-control" id="txtadres" placeholder ="Uw adres en huisnummer">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label for="land">Land</label>
+                        <select class="form-control" name="land" id="dlland">
+                            <option selected>Kies een land</option>
+                            <option>België</option>
+                            <option>Frankrijk</option>
+                            <option>Duitsland</option>
+                            <option>Nederland</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="provincie">Provincie</label>
+                        <select class="form-control" name="provincie" id="dlprovincie">
+                            <option selected>Kies een provincie</option>
+                            <option>Antwerpen</option>
+                            <option>Limburg</option>
+                            <option>Oost-Vlaanderen</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="postcode">Postcode</label>
+                        <input class="form-control" id="postcode" type="number" name="postcode">
+                    </div>
+                    <hr style="width:100%">
+                    <div class="col-sm-6">
+                        <h3>Hou me op de hoogte</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="nieuwsbrief">
+                            <label class="form-check-label" for="nieuwsbrief">Inschrijven voor onze nieuwsbrief</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="voorwaarden">
+                            <label class="form-check-label" for="voorwaarden">Ik ga akkoord met de algemene voorwaarden</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>Betaling</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Banking app" checked>
+                            <label class="form-check-label" for="Banking app">Banking app</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Overschrijving">
+                            <label class="form-check-label" for="Overschrijving">Overschrijving</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Visa card">
+                            <label class="form-check-label" for="Visa card">Visa card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="Paypal">
+                            <label class="form-check-label" for="Paypal">Paypal</label>
+                        </div>
+                    </div>
+                    <hr style="width:100%">
+                    <button type="button" id="btnregistreer" class="btn btn-primary" style="width: 100%; margin: 3%;">Wave your magic wand</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label for="txtemail ">E-mailadres</label>
-                    <input type="text" class="form-control" id="txtemail" placeholder ="you@example.com">
+            <div class="col-sm-4">
+                <div class="row alert alert-danger" id="redalertbox" style="visibility: hidden;">
+                    <h4>Yikes, errors..</h4>
+                    <p style="font-size: medium;" id="redalert"></p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label for="txtwachtwoord">Wachtwoord</label>
-                    <input type="text" class="form-control" id="txtwachtwoord" placeholder ="">
-                    <p>Je wachtwoord moet minstens 8 tekens lang zijn</p>
+                <div class="row alert alert-success" id="greenalertbox" style="visibility: hidden;">
+                    <h4>Goed gedaan!</h4>
+                    <p>Aww yeah, je werd geregistreerd.</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label for="txthhwachtwoord">Herhaal wachtwoord</label>
-                    <input type="text" class="form-control" id="txthhwachtwoord" placeholder ="">
+                <div class="row alert alert-info" id="bluealertbox" style="visibility: hidden;">
+                    <h4>Betalingswijze</h4>
+                    <p style="width: 100%;font-size: medium;" id="bluealert"></p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label for="txtadres">Adres</label>
-                    <input type="text" class="form-control" id="txtadres" placeholder ="Uw adres en huisnummer">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-5">
-                    <label for="land">Land</label>
-                    <select class="form-control" name="land" id="txtland">
-                        <option selected>Kies een land</option>
-                        <option>België</option>
-                        <option>Frankrijk</option>
-                        <option>Duitsland</option>
-                        <option>Nederland</option>
-                    </select>
-                </div>
-                <div class="col-sm-4">
-                    <label for="provincie">Provincie</label>
-                    <select class="form-control" name="provincie" id="txtprovincie">
-                        <option selected>Kies een provincie</option>
-                        <option>Antwerpen</option>
-                        <option>Limburg</option>
-                        <option>Oost-Vlaanderen</option>
-                    </select>
-                </div>
-                <div class="col-sm-3">
-                    <label for="postcode">Postcode</label>
-                    <input class="form-control" type="number" name="postcode" value="postcode" min="1000" max="9999">
-                </div>
-                <hr style="width:100%">
-                <div class="col-sm-6">
-                    <h3>Hou me op de hoogte</h3>
-                    <input type="checkbox" name="nieuwsbrief" value="nieuwsbrief">
-                      <label for="nieuwsbrief">Inschrijven voor onze nieuwsbrief</label><br>
-                      <input type="checkbox" name="voorwaarden" value="voorwaarden">
-                      <label for="voorwaarden">Ik ga akkoord met de algemene voorwaarden.</label><br>
-                </div>
-                <div class="col-sm-6">
-                    <h3>Betaling</h3>
-                    <input type="radio" id="banking" name="betaling" value="bankingapp">
-                    <label for="banking">Banking app</label><br>
-                    <input type="radio" id="overschrijving" name="betaling" value="overschrijving">
-                    <label for="overschrijving">Overschrijving</label><br>
-                    <input type="radio" id="visa" name="betaling" value="visa">
-                    <label for="visa">Visa</label><br>
-                    <input type="radio" id="paypal" name="betaling" value="paypal">
-                    <label for="paypal">Paypal</label>
-                </div>
-                <hr style="width:100%">
-                <button type="button" id="btnregistreer" class="btn btn-primary" style="width: 100%; margin: 3%;">Wave your magic wand</button>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="row" id="redalertbox" style="margin: 5%; padding: 5%; visibility: hidden; background-color: lightpink;">
-                <h4>Yikes, errors..</h4>
-                <p id="redalert"></p>
-            </div>
-            <div class="row" id="greenalertbox" style="margin: 5%; padding: 5%; visibility: hidden; background-color: rgb(178, 240, 178); padding: 5%;">
-                <h4>Goed gedaan!</h4>
-                <p>Aww yeah, je werd geregistreerd.</p>
-            </div>
-            <div class="row" id="bluealertbox" style="margin: 5%; padding: 5%; visibility: hidden; background-color: lightblue; padding: 5%;">
-                <h4>Betalingswijze</h4>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    //Array die alle errors gaat opvangen
-    let errors = []
-    //Knop voor registratie linken met functie voor validatie
-    document.querySelector("#btnregistreer").addEventListener("click", validateForm)
-    function validateForm() {
-        checkEmptyField("txtvoornaam", "Het veld voornaam is vereist.")
-        checkEmptyField("txtachternaam", "Het veld naam is vereist.")
-        checkEmptyField("txtgebruikersnaam", "Het veld gebruikersnaam is vereist.")
-        checkEmptyField("txtadres", "Adres is vereist.")
-        checkEmptyField("txtland", "Land is vereist.")
-        checkEmptyField("txtprovincie", "Provincie is vereist.")
-        //Overige validatiefuncties oproepen
-        if(validateEmail("txtemail") == false){
-            if(errors.includes(melding) == false){
-                errors.push("E-mailadres is niet correct.")
+    </div>      
+    <script>
+        //Array die alle errors gaat opvangen
+        let errors = []
+        //Knop voor registratie linken met functie voor validatie
+        document.querySelector("#btnregistreer").addEventListener("click", validateForm)
+        function validateForm() {
+            errors = []
+            //Lege velden controleren
+            checkEmptyField("txtvoornaam", "Het veld voornaam is vereist.")
+            checkEmptyField("txtachternaam", "Het veld naam is vereist.")
+            checkEmptyField("txtgebruikersnaam", "Het veld gebruikersnaam is vereist.")
+            //Valideert de gebruikersnaam
+            validateUsername("txtgebruikersnaam")
+            //Overige validatiefuncties oproepen
+            //Valideert het e-mailadres
+            if(!validateEmail("txtemail")){
+                if(!errors.includes("E-mailadres is niet correct.")){
+                    errors.push("E-mailadres is niet correct.")
+                    console.log(errors)
+                }
+            }
+            //Valideert het wachtwoord
+            validatePassword("txtwachtwoord", "txthhwachtwoord")
+            //Lege velden controleren
+            checkEmptyField("txtadres", "Adres is vereist.")
+            checkEmptyField("dlland", "Land is vereist.")
+            checkEmptyField("dlprovincie", "Provincie is vereist.")
+            //Betaling validatie
+            validatePayment(document.querySelector('input[name="flexRadioDefault"]:checked'))
+            //Valideert de postcode
+            checkPC(document.getElementById('postcode'))
+            //Valideert de algemene voorwaarden checkbox
+            if(!document.getElementById('voorwaarden').checked){
+                if(!errors.includes("Je moet akkoord gaan met de algemene voorwaarden.")){
+                    errors.push("Je moet akkoord gaan met de algemene voorwaarden.")
+                    console.log(errors)
+                }
+            }
+            //Alerts laten zien
+            showAlerts()
+        }
+        //Functie om te checken of velden leeg zijn
+        function checkEmptyField(veld, melding){
+            waarde = document.getElementById(veld).value
+            if(waarde == "" || waarde == "Kies een land" || waarde == "Kies een provincie"){
+                if(!errors.includes(melding)){
+                    errors.push(melding)
+                    console.log(errors)
+                }
+            }
+        }
+        //Functie om te checken of gebruikersnaam voldoet aan de vereisten
+        function validateUsername(username){
+            user = document.getElementById(username).value
+            var userRegex = /^(?![-.])(\w[-.\w]*)$/
+            if(!user.match(userRegex)){
+                if(!errors.includes("Gebruikersnaam voldoet niet aan vereisten.")){
+                    errors.push("Gebruikersnaam voldoet niet aan vereisten.")
+                    console.log(errors)
+                }
             }
         }
 
-        validatePayment()
-        checkPC()
-
-
-    }
-    //Functie om te checken of velden leeg zijn
-    function checkEmptyField(veld, melding){
-        waarde = document.querySelector(veld).value
-        if(waarde == "" || waarde == "Kies een land" || waarde == "Kies een provincie"){
-            if(errors.includes(melding) == false){
-                errors.push(melding)
+        //Functie om te checken of email geldig is
+        //https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript
+        function validateEmail(emailadres) {
+            email = document.getElementById(emailadres).value
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+            if (email.match(validRegex)) {
+                return true
+            } else {
+                return false
             }
         }
-    }
-    //Functie om te checken of email geldig is
-    //https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript
-    function validateEmail(emailadres) {
-        email = document.querySelector(emailadres).value
-        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
-        if (email.match(validRegex)) {
-            return true
-        } else {
-            return false
+        //Functie om te checken of wachtwoord geldig is
+        //https://www.w3resource.com/javascript/form/password-validation.php#:~:text=To%20check%20a%20password%20between%207%20to%2015%20characters%20which,%5D%7B7%2C15%7D%24.
+        function validatePassword(wachtwoord, herhaalww) {
+            ww = document.getElementById(wachtwoord).value
+            herhaal = document.getElementById(herhaalww).value
+            var wwRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,}$/
+            if(ww == ""){
+                if(!errors.includes("Wachtwoord is vereist.")){
+                    errors.push("Wachtwoord is vereist.")
+                    console.log(errors)
+                }
+            } 
+            if(herhaal == ""){
+                if(!errors.includes("Herhaal wachtwoord is vereist.")){
+                    errors.push("Herhaal wachtwoord is vereist.")
+                    console.log(errors)
+                }
+            }
+            if(ww.length < 8){
+                if(!errors.includes("Wachtwoord moet minstens 8 karakters bevatten.")){
+                    errors.push("Wachtwoord moet minstens 8 karakters bevatten.")
+                    console.log(errors)
+                }
+            }
+            if(ww.match(wwRegex) == false){
+                if(!errors.includes("Wachtwoord voldoet niet aan vereisten.")){
+                    errors.push("Wachtwoord voldoet niet aan vereisten.")
+                    console.log(errors)
+                }
+            }
+            if(ww != herhaal){
+                if(!errors.includes("Wachtwoorden komen niet overeen.")){
+                    errors.push("Wachtwoorden komen niet overeen.")
+                    console.log(errors)
+                }
+            }
         }
-    }
-    //Functie om te checken welke betalingswijze is gekozen
-    function validatePayment() {
-
-    }
-    //Functie om te checken of postcode geldig is
-    function checkPC(){
-
-    }
-</script>
-</body>
+        //Functie om te checken welke betalingswijze is gekozen
+        function validatePayment(veld) {
+            document.getElementById('bluealert').innerHTML = veld.id
+        }
+        //Functie om te checken of postcode geldig is
+        function checkPC(veld){
+            if(veld.value == 0){
+                if(!errors.includes("Postcode is vereist.")){
+                    errors.push("Postcode is vereist.")
+                    console.log(errors)
+                }
+            }
+            if(veld.value < 1000 || veld.value > 9999){
+                if(!errors.includes("De waarde van postcode moet tussen 1000 en 9999 liggen.")){
+                    errors.push("De waarde van postcode moet tussen 1000 en 9999 liggen.")
+                    console.log(errors)
+                }
+            }
+        }
+        //Functie om alerts te tonen
+        function showAlerts(){
+            if (errors.length == 0) {
+                document.getElementById('greenalertbox').style.visibility = "visible"
+                document.getElementById('bluealertbox').style.visibility = "visible"
+                document.getElementById('redalertbox').style.visibility = "hidden"
+            } else {
+                let i = 0
+                let errortext
+                while (i < errors.length) {
+                    errortext += errors[i] + "<br>"
+                    i++
+                }
+                document.getElementById('redalert').innerHTML = errortext
+                document.getElementById('greenalertbox').style.visibility = "hidden"
+                document.getElementById('bluealertbox').style.visibility = "hidden"
+                document.getElementById('redalertbox').style.visibility = "visible"
+            }
+        }
+    </script>   
+    </body>
 </html>
